@@ -5,6 +5,10 @@ import BlackCurveTransition from './BlackCurveTransition';
 import Countdown from './Countdown';
 import CreamCurveTransition from './CreamCurveTransition';
 import NameReveal from './NameReveal';
+import Services from './Services';
+import StatusBanner from './StatusBanner';
+import About from './About';
+import Contact from './Contact';
 
 export default function Intro() {
   const introTextControls = useAnimationControls();
@@ -52,11 +56,19 @@ export default function Intro() {
   ]);
 
   return (
-    <div className="relative min-h-screen w-full bg-[#F6F1E8] overflow-hidden">
+    <div className={`relative w-full bg-[#E6E4E0] ${showOverlays ? 'h-screen overflow-hidden' : ''}`}>
       {/* Landing Page Content - Only visible fully after intro completes */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <NameReveal controls={nameRevealControls} />
-      </div>
+      <NameReveal controls={nameRevealControls} />
+
+      {/* Expanded single-page layout sections */}
+      {!showOverlays && (
+        <>
+          <Services />
+          <StatusBanner />
+          <About />
+          <Contact />
+        </>
+      )}
       
       {/* Intro Overlays */}
       <AnimatePresence>

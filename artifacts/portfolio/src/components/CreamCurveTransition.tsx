@@ -17,9 +17,9 @@ export default function CreamCurveTransition({ controls }: { controls: ReturnTyp
       }}
       className="fixed inset-0 z-40 flex flex-col pointer-events-none"
     >
-      <div className="w-full h-[120vh] bg-[#F6F1E8]" />
+      <div className="w-full h-[120vh] bg-[#E6E4E0]" />
       <svg 
-        className="w-full h-[15vh] fill-[#F6F1E8] absolute top-full left-0 transform -translate-y-[1px]" 
+        className="w-full h-[15vh] fill-[#E6E4E0] absolute top-full left-0 transform -translate-y-[1px]" 
         viewBox="0 0 100 100" 
         preserveAspectRatio="none"
       >

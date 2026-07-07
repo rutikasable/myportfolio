@@ -76,12 +76,12 @@
   --elevate-1: rgba(0, 0, 0, 0.03);
   --elevate-2: rgba(0, 0, 0, 0.08);
 
-  --background: 38 33% 94%;
-  --foreground: 0 0% 7%;
-  --card: 38 33% 94%;
-  --card-foreground: 0 0% 7%;
-  --card-border: 38 20% 88%;
-  --border: 38 20% 88%;
+  --background: 38 10% 89%;
+  --foreground: 0 0% 11%;
+  --card: 38 10% 89%;
+  --card-foreground: 0 0% 11%;
+  --card-border: 38 10% 82%;
+  --border: 38 10% 82%;
   --input: 38 20% 88%;
   --ring: 0 0% 7%;
   --primary: 0 0% 7%;

@@ -1,0 +1,189 @@
+Create only the first landing screen of my portfolio website. Do not create any other sections. This should be a cinematic intro sequence that plays automatically when the website loads.
+
+Use:
+
+Next.js
+React
+Tailwind CSS
+Framer Motion (for all animations)
+Responsive design
+Smooth 60fps animations
+No scroll until the intro is complete.
+Overall Theme
+
+Minimal, premium, luxury, modern.
+
+Colors:
+
+Background: #F6F1E8 (cream)
+Black: #111111
+Text: #111111
+Accent: subtle shadows only
+
+The animation should feel like an Apple product launch or an award-winning design portfolio.
+
+Refer to this prototype only for the animation flow and smoothness:
+https://www.figma.com/proto/lkWLVvhv9fbEAThGjKum2s/portfolio?node-id=27-43&t=C2VvzhXfbxOrVBEb-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1
+
+Do NOT copy the design exactly. Create an original implementation inspired by its motion quality.
+
+Animation Sequence
+STEP 1
+
+Entire screen is black.
+
+Center text appears:
+
+"Are You Ready?"
+
+Animation:
+
+Fade in (0.8s)
+Stay visible (1s)
+Fade out (0.8s)
+
+Nothing else moves.
+
+STEP 2
+
+A large curved black panel starts at the bottom of the screen.
+
+It smoothly glides upward and covers the entire viewport.
+
+Use a soft SVG curve—not a straight rectangle.
+
+The motion should be elegant and fluid.
+
+Duration:
+1.2 seconds
+
+Ease:
+easeInOut
+
+STEP 3
+
+Screen is now completely black.
+
+Display countdown in the center:
+
+3
+
+fade in
+
+hold briefly
+
+fade out
+
+Then
+
+2
+
+same animation
+
+Then
+
+1
+
+same animation
+
+Each number:
+
+Scale slightly from 0.9 → 1
+Opacity 0 → 1 → 0
+Smooth easing
+Around 0.8–1 second each
+
+No sudden transitions.
+
+STEP 4
+
+Now a cream-colored curved panel enters from the top.
+
+It glides downward with the same curved SVG shape.
+
+It gradually reveals the cream background underneath.
+
+Motion should mirror the black curve animation.
+
+Duration:
+1.2 seconds
+
+STEP 5
+
+Now the landing page is visible.
+
+Background:
+Cream (#F6F1E8)
+
+Center the name.
+
+Instead of revealing the whole word at once,
+
+animate each letter individually.
+
+Sequence:
+
+R
+
+u
+
+t
+
+i
+
+k
+
+a
+
+(space)
+
+S
+
+a
+
+b
+
+l
+
+e
+
+Each letter:
+
+slides upward about 25px
+fades from 0 → 1
+slight blur that disappears
+stagger delay around 0.06–0.08 seconds between letters
+smooth easing
+
+The completed name should read:
+
+Rutika Sable
+
+Use a modern premium serif font for the name (such as Cormorant Garamond, Playfair Display, or Canela-style if available).
+
+Below the name, after a short delay, fade in:
+
+Full Stack Developer
+
+using a clean sans-serif font like Inter.
+
+Animation Requirements
+Use Framer Motion variants.
+Use AnimatePresence where appropriate.
+Sequence animations with async/await or animation controls instead of arbitrary setTimeouts where possible.
+Prevent scrolling until the intro completes.
+Ensure transitions are seamless with no flashes or layout shifts.
+Optimize for smooth performance on desktop and mobile.
+Code Structure
+
+Create reusable components:
+
+IntroText
+BlackCurveTransition
+Countdown
+CreamCurveTransition
+NameReveal
+
+Manage the entire animation flow with a single parent Intro component using state or animation controls.
+
+The result should feel polished, cinematic, and premium—like the opening sequence of a high-end interactive portfolio, not a typical website loader.

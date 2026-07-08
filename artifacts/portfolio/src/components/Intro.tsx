@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { useAnimationControls, AnimatePresence } from 'framer-motion';
+import { useEffect, useState, useRef } from 'react';
+import { useAnimationControls, AnimatePresence, useScroll } from 'framer-motion';
 import IntroText from './IntroText';
 import BlackCurveTransition from './BlackCurveTransition';
 import Countdown from './Countdown';
@@ -18,6 +18,13 @@ export default function Intro() {
   const nameRevealControls = useAnimationControls();
   
   const [showOverlays, setShowOverlays] = useState(true);
+
+  const aboutRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress: aboutScrollProgress } = useScroll({
+    target: aboutRef,
+    offset: ["start end", "start start"]
+  });
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -64,8 +71,8 @@ export default function Intro() {
       {!showOverlays && (
         <>
           <Services />
-          <StatusBanner />
-          <About />
+          <StatusBanner scrollProgress={aboutScrollProgress} />
+          <About containerRef={aboutRef} />
           <Contact />
         </>
       )}

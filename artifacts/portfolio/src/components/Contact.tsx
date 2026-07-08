@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { TextRoll } from './AnimatedHelpers';
+import { TextRoll, MaskedHeading } from './AnimatedHelpers';
 
 export default function Contact() {
   const [timeStr, setTimeStr] = useState("Loading...");
@@ -30,15 +30,10 @@ export default function Contact() {
         
         {/* Top CTA */}
         <div className="flex flex-col items-start gap-6">
-          <motion.h3 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="font-sans font-black text-[2.5rem] sm:text-[4rem] md:text-[5rem] tracking-tight leading-none text-[#E6E4E0] uppercase max-w-[600px]"
-          >
-            Have a project in mind?
-          </motion.h3>
+          <MaskedHeading 
+            text="Have a project in mind?"
+            className="font-sans font-black text-[6.5vw] sm:text-[4rem] md:text-[5rem] tracking-tight leading-none text-[#E6E4E0] uppercase whitespace-nowrap"
+          />
           
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -46,7 +41,7 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <a href="mailto:contact@rutikasable.com" className="inline-block mt-4">
+            <a href="mailto:sablerutika@gmail.com" className="inline-block mt-4">
               <button className="group relative overflow-hidden px-8 py-5 bg-[#E6E4E0] text-[#1C1B1A] rounded-full font-sans text-[1.1rem] font-bold tracking-wide inline-flex items-center justify-center gap-3 cursor-pointer select-none shadow-md border border-transparent">
                 {/* Sweeping background fill */}
                 <span className="absolute inset-0 z-10 block overflow-hidden rounded-full pointer-events-none">
@@ -100,9 +95,9 @@ export default function Contact() {
             </span>
             <ul className="flex flex-col gap-3 font-sans font-semibold text-[1rem]">
               {[
-                { name: 'LinkedIn ↗', url: 'https://linkedin.com/' },
-                { name: 'Instagram ↗', url: 'https://instagram.com/' },
-                { name: 'GitHub ↗', url: 'https://github.com/' }
+                { name: 'LinkedIn ↗', url: 'https://www.linkedin.com/in/rutika-sable-321390321/' },
+                { name: 'Instagram ↗', url: 'https://www.instagram.com/rutikasable_19/' },
+                { name: 'GitHub ↗', url: 'https://github.com/rutikasable' }
               ].map((item) => (
                 <li key={item.name}>
                   <TextRoll 

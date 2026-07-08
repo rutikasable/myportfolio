@@ -39,7 +39,7 @@ function Number({ digit, delay }: { digit: string, delay: number }) {
           }
         }
       }}
-      className="absolute text-white font-serif font-light text-[8rem] md:text-[12rem] tracking-tight leading-none"
+      className="absolute text-white font-sans font-black text-[8rem] md:text-[12rem] tracking-tight leading-none"
     >
       {digit}
     </motion.div>

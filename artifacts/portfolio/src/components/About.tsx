@@ -1,7 +1,8 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { MaskedHeading, WordReveal } from './AnimatedHelpers';
 
-export default function About() {
+export default function About({ containerRef }: { containerRef?: React.RefObject<HTMLDivElement> }) {
   const skillsData = [
     {
       category: "Languages & Tools",
@@ -18,12 +19,12 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="w-full bg-[#E6E4E0] text-[#111111] py-20 px-6 md:py-32 md:px-12 relative z-10 border-t border-neutral-300/40">
+    <section ref={containerRef} id="about" className="w-full bg-[#E6E4E0] text-[#111111] py-20 px-6 md:py-32 md:px-12 rounded-t-[2.5rem] relative z-10 mt-[-2rem]">
       <div className="max-w-6xl mx-auto flex flex-col gap-16 md:gap-24">
         
         {/* Animated Headline */}
         <div className="flex flex-col select-none overflow-hidden pb-4">
-          {["DEVELOPER", "DESIGNER", "CREATOR"].map((word, wIdx) => (
+          {["DEVELOPER", "DESIGNER", "ARTIST"].map((word, wIdx) => (
             <MaskedHeading
               key={word}
               text={word}
@@ -64,9 +65,10 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="col-span-1 md:col-span-4"
           >
-            <h3 className="font-sans font-black text-[2.5rem] leading-none uppercase tracking-tight text-neutral-900">
-              Skills
-            </h3>
+            <MaskedHeading 
+              text="Skills"
+              className="font-sans font-black text-[2.5rem] leading-none uppercase tracking-tight text-neutral-900"
+            />
           </motion.div>
           <div className="col-span-1 md:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {skillsData.map((category, catIdx) => (

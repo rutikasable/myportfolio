@@ -93,24 +93,12 @@ export default function NameReveal({ controls }: { controls: ReturnType<typeof u
           variants={contentVariants}
           className="flex flex-col items-start text-left"
         >
-          {/* Custom SVG Diagonal Arrow down-left */}
-          <div className="text-neutral-700">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path 
-                d="M24 8L8 24M8 24H20M8 24V12" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
           <WordReveal 
             text="Designing and developing immersive digital experiences where creativity meets clean, modern engineering." 
             className="mt-4 font-sans text-neutral-700 text-[0.95rem] md:text-[1rem] leading-relaxed max-w-[290px]"
             delay={contentRevealDelay + 0.15}
           />
-          <a href="mailto:contact@rutikasable.com" className="mt-6">
+          <a href="mailto:sablerutika@gmail.com" className="mt-6">
             <button className="group relative overflow-hidden px-7 py-4 bg-[#262524] text-white rounded-full font-sans text-[0.9rem] font-bold tracking-wide inline-flex items-center justify-center gap-2 cursor-pointer select-none border border-transparent shadow-sm">
               {/* Sweeping background fill */}
               <span className="absolute inset-0 z-10 block overflow-hidden rounded-full pointer-events-none">

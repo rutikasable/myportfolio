@@ -1,0 +1,4 @@
+{
+  "buildCommand": "pnpm --filter @workspace/portfolio build",
+  "outputDirectory": "artifacts/portfolio/dist/public"
+}

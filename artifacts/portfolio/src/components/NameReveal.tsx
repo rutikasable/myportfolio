@@ -1,5 +1,5 @@
 import { motion, useAnimationControls, useScroll, useTransform } from 'framer-motion';
-import mapImage from '@assets/map_shadows_bw.png';
+import profilePhoto from '@assets/profile_photo.jpg';
 import { TextRoll, WordReveal } from './AnimatedHelpers';
 
 export default function NameReveal({ controls }: { controls: ReturnType<typeof useAnimationControls> }) {
@@ -117,15 +117,15 @@ export default function NameReveal({ controls }: { controls: ReturnType<typeof u
           </a>
         </motion.div>
 
-        {/* Center Column: Black & White Map Image */}
+        {/* Center Column: Profile Photo */}
         <motion.div 
           variants={contentVariants}
           className="flex justify-center items-center"
         >
           <div className="relative group overflow-hidden rounded-xl bg-neutral-300/40 border border-neutral-300/20 shadow-sm">
             <img 
-              src={mapImage} 
-              alt="Vintage Map on Wall with Window Shadows"
+              src={profilePhoto} 
+              alt="Rutika Sable"
               className="w-[200px] md:w-[230px] aspect-[4/5] object-cover grayscale contrast-110 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-[800ms] ease-out"
             />
           </div>

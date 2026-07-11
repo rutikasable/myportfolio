@@ -18,17 +18,16 @@ export default function StatusBanner({ scrollProgress }: { scrollProgress: any }
           <div className="max-w-6xl mx-auto w-full flex flex-col gap-12 md:gap-16">
             
             {/* Header */}
-            <div className="grid grid-cols-1 md:grid-cols-12 items-start gap-6 md:gap-4 border-b border-neutral-800 pb-12">
+            <div className="flex flex-col gap-4 border-b border-neutral-800 pb-12">
               <MaskedHeading 
                 text="Status" 
-                className="col-span-1 md:col-span-5 font-sans font-black text-[2.5rem] md:text-[3.5rem] leading-none uppercase tracking-tight text-[#E6E4E0]" 
+                className="font-sans font-black text-[2.5rem] md:text-[3.5rem] leading-none uppercase tracking-tight text-[#E6E4E0]" 
               />
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="col-span-1 md:col-span-7 flex flex-col gap-4 text-left"
               >
                 <span className="font-mono text-neutral-500 text-[0.8rem] tracking-[0.2em] uppercase font-bold">
                   (Current Focus)

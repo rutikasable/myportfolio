@@ -35,12 +35,12 @@ export default function NameReveal({ controls }: { controls: ReturnType<typeof u
         initial="initial"
         animate={controls}
         style={{ scale, opacity, borderRadius }}
-        className="relative h-full w-full flex flex-col justify-between p-6 md:p-10 select-none text-[#111111] bg-[#E6E4E0] origin-top"
+        className="relative h-full w-full flex flex-col p-6 md:p-10 pt-4 md:pt-6 select-none text-[#111111] bg-[#E6E4E0] origin-top"
       >
       {/* Header / Navbar */}
       <motion.header 
         variants={contentVariants}
-        className="w-full flex justify-between items-center pt-2"
+        className="w-full flex justify-between items-center pt-0"
       >
         <span className="font-sans text-[0.9rem] md:text-[0.95rem] font-medium text-neutral-800">
           Web Developer & Designer
@@ -58,7 +58,7 @@ export default function NameReveal({ controls }: { controls: ReturnType<typeof u
       </motion.header>
 
       {/* Main Big Title: ZUNED AALIM */}
-      <div className="flex-1 flex flex-col justify-center items-center my-6 md:my-10">
+      <div className="flex flex-col justify-start items-center pt-[6vh] md:pt-[8vh] pb-[2vh] md:pb-[3vh]">
         <motion.h1 
           className="flex flex-wrap justify-center font-sans font-black text-[9.5vw] md:text-[9.8vw] tracking-[-0.03em] leading-[0.85] text-neutral-900"
         >
@@ -87,7 +87,7 @@ export default function NameReveal({ controls }: { controls: ReturnType<typeof u
       </div>
 
       {/* Bottom Section (3 Columns) */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 items-end pb-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 items-end mt-auto pb-[3rem] md:pb-[4rem]">
         {/* Left Column: Arrow + Description + Contact Button */}
         <motion.div 
           variants={contentVariants}
